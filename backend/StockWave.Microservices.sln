@@ -3,12 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockWave.Adapter.Api", "StockWave.Adapter.Api\StockWave.Adapter.Api.csproj", "{B92F4B2C-E62A-43D6-9DD1-899D4C9F0F94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B92F4B2C-E62A-43D6-9DD1-899D4C9F0F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92F4B2C-E62A-43D6-9DD1-899D4C9F0F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B92F4B2C-E62A-43D6-9DD1-899D4C9F0F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92F4B2C-E62A-43D6-9DD1-899D4C9F0F94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DA2DE7F-5EFF-44D1-A7C6-EEB8BDE39337}
 	EndGlobalSection
 EndGlobal

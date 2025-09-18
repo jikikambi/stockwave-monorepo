@@ -1,0 +1,51 @@
+services:
+  stockwave.adapter.api:
+    build:
+      context: ./backend/StockWave.Adapter.Api
+      dockerfile: Dockerfile
+    container_name: stockwave-adapter-api
+    ports:
+      - "5000:5000"   # HTTP
+      - "5001:5001"   # HTTPS (optional if enabled)
+    networks:
+      - stockwave-net
+
+  angular-app:
+    build:
+      context: .
+      dockerfile: frontend/angular-app/Dockerfile
+    container_name: angular-app
+    ports:
+      - "4200:80"
+    depends_on:
+      - stockwave.adapter.api
+    networks:
+      - stockwave-net
+
+  react-app:
+    build:
+      context: .
+      dockerfile: frontend/react-app/Dockerfile
+    container_name: react-app
+    ports:
+      - "4201:80"
+    depends_on:
+      - stockwave.adapter.api
+    networks:
+      - stockwave-net
+
+  vue-app:
+    build:
+      context: .
+      dockerfile: frontend/vue-app/Dockerfile
+    container_name: vue-app
+    ports:
+      - "4202:80"
+    depends_on:
+      - stockwave.adapter.api
+    networks:
+      - stockwave-net
+
+networks:
+  stockwave-net:
+    driver: bridge

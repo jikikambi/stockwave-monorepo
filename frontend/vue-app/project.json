@@ -1,8 +1,22 @@
 {
   "name": "vue-app",
-  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "frontend/vue-app/src",
-  "// targets": "to see all targets run: nx show project vue-app --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/vue-app",
+        "configFile": "frontend/vue-app/vite.config.ts"
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "options": {
+        "buildTarget": "vue-app:build"
+      }
+    }
+  }
 }

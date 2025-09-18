@@ -1,0 +1,67 @@
+# ----------------------------
+# Line endings for source files
+# ----------------------------
+
+# Frontend / Nx / JS/TS
+*.ts      text eol=lf
+*.tsx     text eol=lf
+*.js      text eol=lf
+*.jsx     text eol=lf
+*.json    text eol=lf
+*.css     text eol=lf
+*.scss    text eol=lf
+*.sass    text eol=lf
+*.html    text eol=lf
+*.vue     text eol=lf
+*.mjs     text eol=lf
+
+# Markdown & Docs
+*.md      text eol=lf
+*.txt     text eol=lf
+
+# Shell scripts
+*.sh      text eol=lf
+*.bash    text eol=lf
+
+# ----------------------------
+# Line endings for .NET files
+# ----------------------------
+
+# Solution & project files
+*.sln     text eol=crlf
+*.csproj  text eol=crlf
+*.props   text eol=crlf
+*.targets text eol=crlf
+*.config  text eol=crlf
+
+# C# source files
+*.cs      text eol=lf
+*.cshtml  text eol=lf
+*.razor   text eol=lf
+
+# ----------------------------
+# Binary files (never convert)
+# ----------------------------
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.pdf     binary
+*.zip     binary
+*.tar.gz  binary
+*.woff    binary
+*.woff2   binary
+*.eot     binary
+*.ttf     binary
+*.mp3     binary
+*.mp4     binary
+
+# ----------------------------
+# Generated / build folders
+# ----------------------------
+/node_modules/      export-ignore
+/dist/              export-ignore
+/build/             export-ignore
+/bin/               export-ignore
+/obj/               export-ignore
